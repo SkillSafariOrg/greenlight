@@ -30,6 +30,9 @@ RUN bundle config --global frozen 1 \
     && find vendor/bundle/ruby/2.7.0/gems/ -name "*.c" -delete \
     && find vendor/bundle/ruby/2.7.0/gems/ -name "*.o" -delete
 
+# install jwt
+RUN gem install jwt
+
 # Adding project files.
 COPY . .
 
