@@ -146,5 +146,10 @@ Rails.application.routes.draw do
     end
   end
 
+  # Odoo API routes
+  scope '/odoo' do
+    get '/setpassword', to: 'odoo#setpassword'
+  end
+
   root to: 'main#index'
 end
