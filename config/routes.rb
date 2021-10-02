@@ -148,7 +148,13 @@ Rails.application.routes.draw do
 
   # Odoo API routes
   scope '/odoo' do
-    get '/setpassword', to: 'odoo#setpassword'
+    get '/testapi', to: 'odoo#testapi'
+    get '/createuser', to: 'odoo#createuser'
+    get '/updateuser', to: 'odoo#updateuser'
+    get '/updateuserpwd', to: 'odoo#updateuserpwd'
+    get '/activeuser', to: 'odoo#activeuser'
+    get '/inactiveuser', to: 'odoo#inactiveuser'
+    get '/deleteuser', to: 'odoo#deleteuser'
   end
 
   root to: 'main#index'
